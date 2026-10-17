@@ -25,3 +25,9 @@ scripts/sync-from-app.sh   # expects the app at ../claude-bubble (or set CLAUDE_
 
 The orb (`js/vendor/orbParticles.js`) and the sounds come from the original Bubble designs. The app's Metal orb was
 ported from the same design.
+
+## Share image and icon
+
+`og.png` (1200×630, used for link previews) and `apple-touch-icon.png` are screenshots of `scripts/share/index.html`
+and `scripts/share/icon.html`, which use the site's real orb and the app's colours. To remake them, serve the site
+and capture those pages at 1200×630 and 180×180.

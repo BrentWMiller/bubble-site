@@ -47,7 +47,8 @@ button { all: unset; cursor: pointer; }
   padding: 20px var(--m);
 }
 .nav-left { display: flex; align-items: center; gap: 20px; min-width: 0; }
-.brand { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.brand { margin: 0; display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
 .brand-dot { width: 9px; height: 9px; border-radius: 50%; background: #fff; box-shadow: 0 0 10px rgba(255,255,255,.6); }
 .modes { display: flex; gap: 2px; padding: 3px; background: rgba(255,255,255,.07); border-radius: 999px; }
 .modes button {

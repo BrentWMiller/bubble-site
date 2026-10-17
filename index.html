@@ -3,8 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bubble</title>
-<meta name="description" content="A particle orb for macOS that shows what every Claude Code session is doing, and tells you when Claude needs you.">
+<title>Bubble · See what every Claude Code session is doing</title>
+<meta name="description" content="Bubble is a free particle orb for macOS that shows what every Claude Code session is doing, and tells you when Claude needs you. Float it anywhere or dock it at the edge of your screen.">
+<link rel="canonical" href="https://brentwmiller.github.io/bubble-site/">
+<meta name="theme-color" content="#040409">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bubble">
+<meta property="og:title" content="Bubble · Look away until Claude needs you">
+<meta property="og:description" content="A particle orb for macOS that shows what every Claude Code session is doing, and tells you when Claude needs you.">
+<meta property="og:url" content="https://brentwmiller.github.io/bubble-site/">
+<meta property="og:image" content="https://brentwmiller.github.io/bubble-site/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bubble: a glowing violet particle orb beside the words “Look away until Claude needs you.”">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bubble · Look away until Claude needs you">
+<meta name="twitter:description" content="A particle orb for macOS that shows what every Claude Code session is doing, and tells you when Claude needs you.">
+<meta name="twitter:image" content="https://brentwmiller.github.io/bubble-site/og.png">
+<meta name="twitter:image:alt" content="Bubble: a glowing violet particle orb beside the words “Look away until Claude needs you.”">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Bubble",
+  "description": "A particle orb for macOS that shows what every Claude Code session is doing, and tells you when Claude needs you.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "macOS 14 or later",
+  "url": "https://brentwmiller.github.io/bubble-site/",
+  "downloadUrl": "https://github.com/BrentWMiller/claude-bubble/releases/latest",
+  "image": "https://brentwmiller.github.io/bubble-site/og.png",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
@@ -17,7 +53,7 @@
 
   <nav class="nav">
     <div class="nav-left">
-      <div class="brand"><span class="brand-dot"></span>Bubble</div>
+      <h1 class="brand"><span class="brand-dot"></span>Bubble</h1>
       <div class="modes" id="modes">
         <button data-mode="orb" class="on">Orb</button>
         <button data-mode="dock">Dock</button>
@@ -30,6 +66,17 @@
   </nav>
 
   <main class="stage">
+    <!-- For search engines, screen readers and anyone without JavaScript: what the animation shows. -->
+    <section class="sr-only">
+      <h2>See what every Claude Code session is doing</h2>
+      <ul>
+        <li>The orb's colour and motion show whether Claude is working, needs you, hit an error, or is done.</li>
+        <li>Hover it to see every session, with its GitHub issue or pull request.</li>
+        <li>Float it anywhere, or dock it as an island at the edge of the screen.</li>
+        <li>Free and open source, for macOS 14 or later.</li>
+      </ul>
+      <p><a href="https://github.com/BrentWMiller/claude-bubble/releases/latest">Download Bubble for macOS</a></p>
+    </section>
     <div class="orb-wrap" id="orbWrap">
       <div class="orb-scale" id="orbScale">
       </div>
