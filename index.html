@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bubble</title>
+<meta name="description" content="A particle orb for macOS that shows what every Claude Code session is doing, and tells you when Claude needs you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="root" id="root">
+  <div class="grid"></div>
+  <div class="glow" id="glow"></div>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <div class="brand"><span class="brand-dot"></span>Bubble</div>
+      <div class="modes" id="modes">
+        <button data-mode="orb" class="on">Orb</button>
+        <button data-mode="dock">Dock</button>
+      </div>
+    </div>
+    <div class="nav-right">
+      <button class="sound" id="sound">Sound off</button>
+      <a class="gh" href="https://github.com/BrentWMiller/claude-bubble">GitHub</a>
+    </div>
+  </nav>
+
+  <main class="stage">
+    <div class="orb-wrap" id="orbWrap">
+      <div class="orb-scale" id="orbScale">
+      </div>
+    </div>
+    <div class="toasts" id="toasts"></div>
+
+    <p class="pitch chrome">A particle orb for macOS that shows what every Claude Code session is doing, and tells you when Claude needs you.</p>
+
+    <div class="term chrome" id="termBox">
+      <div class="term-head"><span>~/code/auth-service</span><span>claude</span></div>
+      <div class="term-lines" id="term"></div>
+    </div>
+  </main>
+
+  <footer class="timeline chrome">
+    <div class="status">
+      <div class="status-left">
+        <span class="dot" id="dot"></span>
+        <span class="proj">auth-service</span>
+        <span class="slash">/</span>
+        <span class="detail" id="detail"></span>
+      </div>
+      <div class="status-right">
+        <span class="motion" id="motion"></span>
+        <span><span class="clock" id="clock">00:00.0</span><span class="total" id="total"></span></span>
+      </div>
+    </div>
+    <div class="word"><span id="word" class="word-chars"></span><span class="word-dot" id="wordDot"></span></div>
+    <div class="segs" id="segs"></div>
+  </footer>
+
+  <div class="island-layer" id="islandLayer" hidden></div>
+</div>
+
+<script src="js/vendor/orbShared.js"></script>
+<script src="js/vendor/bubbleSounds.js"></script>
+<script src="js/vendor/bubbleAmbient.js"></script>
+<script src="data/app.js"></script>
+<script src="js/vendor/orbParticles.js"></script>
+<script src="js/palette.js"></script>
+<script src="js/toasts.js"></script>
+<script src="js/island.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
